@@ -4,7 +4,7 @@ import { HomeComponent } from './home.component';
 import { ServicesComponent } from './pages/services.component';
 import { GalleryComponent } from './pages/gallery.component';
 import { ProjectsComponent } from './pages/projects.component';
-import { WebProjectsComponent } from './pages/web-projects.component';
+import { WebProjectsComponent } from './pages/web-projects/web-projects.component';
 import { MobileProjectsComponent } from './pages/mobile-projects.component';
 
 import { ConfirmGuard } from './confirm.guard';

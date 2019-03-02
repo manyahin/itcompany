@@ -1,0 +1,20 @@
+.gallery {
+  max-width: 1100px;
+  display: flex; 
+  flex-wrap: wrap;
+
+  .item { 
+    margin: 10px;
+  }
+}
+
+img {
+  transition: all 1s;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
+
+img:hover{
+  transform: scale(1.1)
+}

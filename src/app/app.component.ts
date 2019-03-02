@@ -4,12 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
     <app-navbar></app-navbar>
-    <div class="container">
+    <div class="main">
       <router-outlet></router-outlet>
     </div>
   `,
   styles: [`
-    .container { margin-top: 1em; }
+    .main { padding: 1em; }
   `]
 })
 export class AppComponent {
