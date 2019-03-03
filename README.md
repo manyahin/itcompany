@@ -1,4 +1,6 @@
-# Exam
+# IT Company
+
+> Simple site for IT company with gallery in Angular 7, SCSS, RxJS, HTML
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.
 
