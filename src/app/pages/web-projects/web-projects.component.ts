@@ -1,16 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+
+import { ImageService } from './image.service';
 
 @Component({
   selector: 'app-web-projects',
   templateUrl: './web-projects.component.html',
-  styleUrls: ['./web-projects.component.scss']
+  styleUrls: ['./web-projects.component.scss'],
+  providers: [ImageService]
 })
 export class WebProjectsComponent implements OnInit {
-  fileNames = ['people-woman-coffee-meeting.jpg','pexels-photo-1451449.jpeg','startup-photos (2).jpg','pexels-photo-1036641.jpeg','pexels-photo-416405.jpeg','startup-photos.jpg','pexels-photo-1260309.jpeg','pexels-photo-669615.jpeg','pexels-photo-1266012.jpeg','startup-photos (1).jpg']
+  currentPage: number;
+  imgs: string[];
 
-  constructor() { }
+  imageService: ImageService;
+
+  constructor(imageService: ImageService) {
+    this.imageService = imageService;
+    this.currentPage = 1;
+  }
 
   ngOnInit() {
+    this.showImages();
+  }
+
+  showImages() {
+    this.imgs = this.imageService.getImagesForPage(this.currentPage);
+  }
+
+  selectPage(page: number) {
+    this.currentPage = page;
+    this.showImages();
   }
 
 }
