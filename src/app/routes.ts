@@ -1,4 +1,4 @@
-import { CanActivate } from '@angular/router';
+import { CanActivate, Routes } from '@angular/router';
 
 import { HomeComponent } from './home.component';
 import { ServicesComponent } from './pages/services.component';
@@ -9,7 +9,7 @@ import { MobileProjectsComponent } from './pages/mobile-projects.component';
 
 import { ConfirmGuard } from './confirm.guard';
 
-const routes = [
+export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'gallery', component: GalleryComponent },
@@ -22,5 +22,3 @@ const routes = [
   },
   { path: '**', component: HomeComponent }
 ];
-
-export default routes;
