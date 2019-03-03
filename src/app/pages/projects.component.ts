@@ -4,8 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-projects',
   template: `
     <h2>Проекты</h2>
-    <h3>Threefold dashboard</h3>
-    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    <h3>Ваш шедевр готов!</h3>
+    <p>Товарищи! укрепление и развитие структуры играет важную роль в формировании направлений прогрессивного развития. Товарищи! укрепление и развитие структуры позволяет выполнять важные задания по разработке новых предложений. Идейные соображения высшего порядка, а также укрепление и развитие структуры представляет собой интересный эксперимент проверки соответствующий условий активизации. Таким образом укрепление и развитие структуры требуют от нас анализа направлений прогрессивного развития. Идейные соображения высшего порядка, а также постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Идейные соображения высшего порядка, а также консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании модели развития.</p>
   `,
   styles: []
 })

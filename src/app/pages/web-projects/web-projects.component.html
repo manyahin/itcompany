@@ -1,17 +1,9 @@
 <h2>Веб проекты</h2>
+<app-pagination [page]="currentPage" (goTo)="goToPage($event)"></app-pagination>
+<p>Все картинки загружены с picsum.photos в разных размерах</p>
 <div class="gallery">
   <div class="item" *ngFor="let img of imgs">
     <img [src]="img">
   </div>
 </div>
-<div class="pagination">
-  <nav aria-label="Page navigation example">
-    <ul class="pagination bg-dark">
-      <li class="page-item" [ngClass]="{'active': currentPage == 1}"><a class="page-link" [routerLink]="" (click)="selectPage(1)">1</a></li>
-      <li class="page-item" [ngClass]="{'active': currentPage == 2}"><a class="page-link" [routerLink]="" (click)="selectPage(2)">2</a></li>
-      <li class="page-item" [ngClass]="{'active': currentPage == 3}"><a class="page-link" [routerLink]="" (click)="selectPage(3)">3</a></li>
-      <li class="page-item" [ngClass]="{'active': currentPage == 4}"><a class="page-link" [routerLink]="" (click)="selectPage(4)">4</a></li>
-      <li class="page-item" [ngClass]="{'active': currentPage == 5}"><a class="page-link" [routerLink]="" (click)="selectPage(5)">5</a></li>
-    </ul>
-  </nav>
-</div>
+<app-pagination [page]="currentPage" (goTo)="goToPage($event)"></app-pagination>

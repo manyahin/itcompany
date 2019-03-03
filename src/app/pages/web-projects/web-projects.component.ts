@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
+import { Subject, Observable, BehaviorSubject } from "rxjs";
 
 import { ImageService } from './image.service';
+
+import { PaginationComponent } from './pagination/pagination.component'
 
 @Component({
   selector: 'app-web-projects',
@@ -11,6 +13,8 @@ import { ImageService } from './image.service';
 })
 export class WebProjectsComponent implements OnInit {
   currentPage: number;
+  private pageStream = new BehaviorSubject<number>(1);
+
   imgs: string[];
 
   imageService: ImageService;
@@ -21,16 +25,18 @@ export class WebProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.showImages();
+    this.pageStream.subscribe(page => {
+      this.currentPage = page
+      this.showImages();
+    })
   }
 
   showImages() {
     this.imgs = this.imageService.getImagesForPage(this.currentPage);
   }
 
-  selectPage(page: number) {
-    this.currentPage = page;
-    this.showImages();
+  goToPage(page: number) {
+    this.pageStream.next(page)
   }
 
 }

@@ -12,6 +12,7 @@ import { MobileProjectsComponent } from './pages/mobile-projects.component';
 import { HomeComponent } from './home.component';
 
 import { ConfirmGuard } from './confirm.guard';
+import { PaginationComponent } from './pages/web-projects/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ConfirmGuard } from './confirm.guard';
     ProjectsComponent,
     WebProjectsComponent,
     MobileProjectsComponent,
-    HomeComponent
+    HomeComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

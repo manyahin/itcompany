@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-navbar',
   template: `
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">IT</a>
+      <a class="navbar-brand" routerLink="/">IT</a>
       <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
         <span class="navbar-toggler-icon"></span>
       </button>
